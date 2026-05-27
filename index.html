@@ -3,33 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madu Keluarga - Murni & Alami</title>
+    <title>Madu Keluarga - Murni & Alami dari Alam</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">MaduKeluarga.</div>
+        <div class="logo">Madu<span>Keluarga.</span></div>
         <ul class="nav-links">
+            <li><a href="#hero">Beranda</a></li>
             <li><a href="#story">Cerita Kami</a></li>
             <li><a href="#produk">Produk</a></li>
             <li><a href="#testimoni">Testimoni</a></li>
         </ul>
     </nav>
 
-    <header class="hero-parallax">
+    <header id="hero" class="hero-parallax">
         <div class="hero-content">
-            <h1>Kemurnian Madu Asli, <br>Langsung dari Alam.</h1>
-            <p>Didekasikan untuk kesehatan keluarga Anda dengan kualitas yang terjaga.</p>
-            <a href="#produk" class="btn-primary">Lihat Produk</a>
+            <span class="tagline">100% Madu Murni Pilihan</span>
+            <h1>Kemurnian Alami<br>Untuk Kesehatan Keluarga</h1>
+            <p>Dipanen dengan hati, dijaga keasliannya tanpa bahan campuran demi kualitas terbaik di setiap tetesnya.</p>
+            <a href="#produk" class="btn-primary">Jelajahi Produk</a>
         </div>
     </header>
 
     <main>
         <section id="story" class="section story-section">
-            <div class="container">
-                <h2>Cerita di Balik Setiap Tetes</h2>
-                <p>Madu kami dipanen langsung dari peternakan keluarga dengan metode tradisional yang menjaga seluruh kebaikan nutrisi di dalamnya. Tanpa bahan campuran, tanpa proses pemanasan ekstrem, menghasilkan madu murni berkualitas premium untuk Anda.</p>
+            <div class="container split-container">
+                <div class="story-img">
+                    <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80" alt="Madu Murni Alami">
+                </div>
+                <div class="story-text">
+                    <span class="section-subtitle">Warisan Kebaikan</span>
+                    <h2>Cerita Di Balik Setiap Tetes Madu Kami</h2>
+                    <p>Madu Keluarga lahir dari kepedulian kami untuk menghadirkan pemanis alami yang benar-benar jujur. Bersumber dari nektar bunga pilihan di kawasan yang asri, kami memastikan proses pemanenan dilakukan secara tradisional tanpa merusak ekosistem lebah.</p>
+                    <p>Tanpa melalui proses pemanasan berlebih (*raw honey*), kandungan enzim, vitamin, dan antioksidan baik di dalam madu ini tetap terjaga utuh sampai ke tangan Anda.</p>
+                </div>
             </div>
         </section>
 
@@ -37,18 +46,74 @@
 
         <section id="produk" class="section product-section">
             <div class="container">
-                <h2>Varian Madu Pilihan</h2>
+                <span class="section-subtitle">Katalog Produk</span>
+                <h2>Varian Madu Terbaik Ukuran Pilihan</h2>
+                
                 <div class="product-grid">
                     <div class="product-card">
-                        <div class="product-img-placeholder">🍯</div>
-                        <h3>Madu Multiflora 500gr</h3>
-                        <p class="price">Rp 120.000</p>
-                        <a href="https://wa.me/628xxxxxxxxxx?text=Halo,%20saya%20ingin%20pesan%20Madu%20Multiflora" class="btn-wa" target="_blank">Pesan via WhatsApp</a>
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=600&q=80" alt="Madu Multiflora">
+                        </div>
+                        <div class="product-info">
+                            <h3>Madu Murni Multiflora (500gr)</h3>
+                            <p class="product-desc">Madu dari nektar beragam bunga hutan. Rasa manis yang kaya dan pas untuk menjaga imun harian.</p>
+                            <p class="price">Rp 120.000</p>
+                            <a href="https://wa.me/628xxxxxxxxxx?text=Halo,%20saya%20tertarik%20pesan%20Madu%20Multiflora%20500gr" class="btn-wa" target="_blank">Pesan via WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=600&q=80" alt="Madu Randu">
+                        </div>
+                        <div class="product-info">
+                            <h3>Madu Randu Asli (350gr)</h3>
+                            <p class="product-desc">Memiliki aroma khas bunga randu dengan sedikit sentuhan rasa segar. Sangat disukai anak-anak.</p>
+                            <p class="price">Rp 85.000</p>
+                            <a href="https://wa.me/628xxxxxxxxxx?text=Halo,%20saya%20tertarik%20pesan%20Madu%20Randu%20350gr" class="btn-wa" target="_blank">Pesan via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimoni" class="section testimony-section">
+            <div class="container">
+                <span class="section-subtitle">Ulasan Pembeli</span>
+                <h2>Apa Kata Mereka Yang Sudah Mencoba?</h2>
+                
+                <div class="testimony-grid">
+                    <div class="testimony-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="comment">"Awalnya ragu beli madu online, tapi pas paket datang dan dicoba, rasanya benar-benar mantap dan kerasa banget bedanya sama madu pabrikan. Anak-anak di rumah juga suka!"</p>
+                        <div class="user-profile">
+                            <div class="avatar-initial">B</div>
+                            <div>
+                                <h4>Budi Santoso</h4>
+                                <span class="status">Pembeli Terverifikasi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimony-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="comment">"Paling suka pelayanan kilatnya. Madunya kental, botolnya aman dilapisi bubble wrap tebal. Udah langganan buat konsumsi keluarga tiap pagi."</p>
+                        <div class="user-profile">
+                            <div class="avatar-initial">A</div>
+                            <div>
+                                <h4>Aisyah R.</h4>
+                                <span class="status">Pembeli Terverifikasi</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Madu Keluarga. Semua Hak Dilindungi. Berbasis di Jambi, Indonesia.</p>
+    </footer>
 
 </body>
 </html>
