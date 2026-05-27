@@ -1,10 +1,17 @@
+/* Google Fonts Import: Playfair Display (Serif Mewah) & Plus Jakarta Sans (Sans-Serif Bersih) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
 :root {
-    --primary-color: #E69500;
-    --primary-hover: #C47F00;
-    --bg-light: #FDFBF7; /* Warna krem madu sangat lembut */
-    --text-dark: #2D2519; /* Cokelat sangat gelap agar organik */
-    --text-muted: #6E6557;
-    --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    
+    /* Palet Warna Bali Honey: Earthy, Muted, Gold, & Charcoal Black */
+    --color-bg: #FFFFFF;
+    --color-bg-soft: #F9F8F6; /* Warna broken white hangat yang mewah */
+    --color-text-dark: #1A1A1A; /* Hitam arang eksklusif */
+    --color-text-muted: #5A544B;
+    --color-gold: #C29B38; /* Muted Gold (Emas Redup khas Brand Premium) */
+    --color-gold-hover: #A37F29;
 }
 
 * {
@@ -15,55 +22,59 @@
 
 html {
     scroll-behavior: smooth;
-    font-family: var(--font-main);
-    color: var(--text-dark);
-    background-color: var(--bg-light);
+    font-family: var(--font-sans);
+    color: var(--color-text-dark);
+    background-color: var(--color-bg);
 }
 
-/* Navigasi Premium */
+/* Navbar Minimalis Kelas Atas */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background: rgba(253, 251, 247, 0.9);
+    padding: 30px 10%;
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-    font-size: 1.6rem;
-    font-weight: 800;
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
-.logo span { color: var(--primary-color); }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 40px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 600;
-    font-size: 1rem;
+    color: var(--color-text-dark);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     transition: color 0.3s;
 }
 
-.nav-links a:hover { color: var(--primary-color); }
+.nav-links a:hover {
+    color: var(--color-gold);
+}
 
-/* Hero Parallax Visual */
+/* Hero Section ala Editorial Majalah */
 .hero-parallax {
     height: 100vh;
-    background-image: linear-gradient(rgba(45, 37, 25, 0.55), rgba(45, 37, 25, 0.55)), url('https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=1920&q=80');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=1920&q=80');
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -72,74 +83,291 @@ html {
     padding: 0 20px;
 }
 
-.hero-content { max-width: 800px; color: white; }
-.tagline {
-    background: var(--primary-color);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    display: inline-block;
-    margin-bottom: 20px;
+.hero-content {
+    max-width: 900px;
 }
-.hero-content h1 { font-size: 3.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-.hero-content p { font-size: 1.25rem; margin-bottom: 35px; font-weight: 300; opacity: 0.95; }
 
-/* Struktur Umum Section */
-.section { padding: 120px 0; }
-.container { width: 85%; max-width: 1140px; margin: 0 auto; }
-.section-subtitle { display: block; color: var(--primary-color); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
-h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 50px; }
+.tagline {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-gold);
+    display: block;
+    margin-bottom: 25px;
+}
 
-/* Story Section Layout */
-.split-container { display: flex; align-items: center; gap: 60px; text-align: left; }
-.story-img { flex: 1; }
-.story-img img { width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(45,37,25,0.1); object-fit: cover; height: 450px; }
-.story-text { flex: 1; }
-.story-text p { font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 20px; }
+.hero-content h1 {
+    font-family: var(--font-serif);
+    font-size: 4.2rem;
+    font-weight: 400;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
 
-/* Parallax Divider */
+.hero-content p {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    font-weight: 300;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+/* Tombol Desain Clean Luxury */
+.btn-editorial {
+    display: inline-block;
+    padding: 15px 40px;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+}
+
+.btn-editorial:hover {
+    background: white;
+    color: var(--color-text-dark);
+}
+
+/* Sections & Typography */
+.section {
+    padding: 140px 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-subtitle {
+    display: block;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 60px;
+    letter-spacing: 0.5px;
+}
+
+/* Story Section Split Layout */
+.split-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.story-img {
+    flex: 1;
+}
+
+.story-img img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    filter: grayscale(10%); /* Memberikan kesan vintage elegan */
+}
+
+.story-text {
+    flex: 1;
+    text-align: left;
+}
+
+.story-text h2 {
+    margin-bottom: 30px;
+}
+
+.story-text p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--color-text-muted);
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+/* Parallax Background Divider */
 .divider-parallax {
-    height: 40vh;
-    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=1920&q=80');
+    height: 50vh;
+    background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('https://images.unsplash.com/photo-1586790176885-3004a4087e59?auto=format&fit=crop&w=1920&q=80');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
 
-/* Product Cards Moderen */
-.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
-.product-card { background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.02); border: 1px solid #F1EFEA; transition: transform 0.3s, box-shadow 0.3s; text-align: left; }
-.product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(230,149,0,0.08); }
-.product-img img { width: 100%; height: 250px; object-fit: cover; }
-.product-info { padding: 30px; }
-.product-info h3 { font-size: 1.4rem; margin-bottom: 12px; }
-.product-desc { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; height: 70px; }
-.price { font-size: 1.5rem; font-weight: 800; color: var(--primary-color); margin: 20px 0; }
+/* Product Boutique Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 50px;
+    margin-top: 20px;
+}
 
-/* Testimonial Cards */
-.testimony-section { background: #F7F3EA; text-align: center; }
-.testimony-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.testimony-card { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); text-align: left; display: flex; flex-direction: column; justify-content: space-between; }
-.stars { margin-bottom: 15px; }
-.comment { font-size: 1.05rem; line-height: 1.7; color: var(--text-muted); italic; margin-bottom: 25px; }
-.user-profile { display: flex; align-items: center; gap: 15px; }
-.avatar-initial { width: 45px; height: 45px; background: #E69500; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; }
-.user-profile h4 { font-size: 1rem; font-weight: 700; }
-.status { font-size: 0.8rem; color: #25D366; font-weight: 600; }
+.product-card {
+    background: transparent;
+    text-align: left;
+}
 
-/* Tombol Aksi */
-.btn-primary { display: inline-block; padding: 14px 35px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 30px; font-weight: 700; transition: background 0.3s, transform 0.2s; box-shadow: 0 10px 20px rgba(230,149,0,0.2); }
-.btn-primary:hover { background: var(--primary-hover); transform: translateY(-2px); }
-.btn-wa { display: block; text-align: center; padding: 14px; background: #25D366; color: white; text-decoration: none; border-radius: 16px; font-weight: 700; transition: background 0.3s; }
-.btn-wa:hover { background: #1FBE57; }
+.product-img {
+    overflow: hidden;
+    background: var(--color-bg-soft);
+    margin-bottom: 25px;
+}
 
-footer { background: #2D2519; color: #FAF8F5; text-align: center; padding: 40px 20px; font-size: 0.9rem; opacity: 0.9; }
+.product-img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.04);
+}
+
+.product-info h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.weight {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.product-desc {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-weight: 300;
+    height: 60px;
+}
+
+.price {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    color: var(--color-gold);
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+/* Tombol WA Bergaya Brand High-End */
+.btn-shop {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background: var(--color-text-dark);
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background 0.3s;
+}
+
+.btn-shop:hover {
+    background: var(--color-gold);
+}
+
+/* Editorial Reviews Section */
+.testimony-section {
+    background: var(--color-bg-soft);
+    text-align: center;
+}
+
+.testimony-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.testimony-card {
+    background: #FFFFFF;
+    padding: 50px 40px;
+    border: 1px solid #EAE8E4;
+    text-align: center;
+}
+
+.comment {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 30px;
+}
+
+.user-profile h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+}
+
+.status {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+/* Elegant Footer */
+footer {
+    background: #111111;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.footer-logo {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+footer .copyright {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    opacity: 0.4;
+}
 
 /* Responsive Mobile */
-@media (max-width: 768px) {
-    .split-container { flex-direction: column; text-align: center; gap: 30px; }
-    .hero-content h1 { font-size: 2.4rem; }
-    .nav-links { display: none; } /* Menyederhanakan tampilan mobile */
+@media (max-width: 900px) {
+    .split-container { flex-direction: column; text-align: center; gap: 40px; }
+    .hero-content h1 { font-size: 2.8rem; }
+    .nav-links { display: none; }
+    .section { padding: 90px 0; }
+    h2 { font-size: 2.2rem; }
 }
